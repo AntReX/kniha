@@ -4,6 +4,8 @@ tato webová aplikace slouží pouze jako ukázka znalostí pro firmu u které s
 # Přihlášení
  - jedná se pouze o primitivní přihlášení bez databáze
  - nastavení jména i hesla se provádí v /modely/Conf.php
+ - defaultní přihlášení "pro-idea"
+ 
 # Vytvoření knihy
   - rok vydání je omezený na 4 čísla v opačném případě vrací chybu
   - autor je omezený na 50 znaků a vrací taktéž chybovou hlášku
@@ -16,7 +18,7 @@ tato webová aplikace slouží pouze jako ukázka znalostí pro firmu u které s
 
 # Vyhledávání
 - rok vydání se vyhledává klasickým způsobem, kdy rok se musí rovnat roku
-- autora využívá funkci (LIKE)
+- autor využívá funkci (LIKE)
 - název knihy je fulltextově a musí se shodovat aspoň jedno slovo
 - vyhledávání je úmyslně v tomto případě ajaxově a za pomocí jQuery dochází k úpravě DOM.
 - jakmile nejsou zadané žádné údaje, tak se aplikuej defulatní načtení (100 záznamů)
@@ -28,4 +30,5 @@ tato webová aplikace slouží pouze jako ukázka znalostí pro firmu u které s
 
 # Smazání knihy
 - vpravo každé knihy je tlačítko na smazání knihy z databáze
-- každé smazání se musí potvrdit z důvodu nechtěného překliknutí 
+- každé smazání se musí potvrdit z důvodu nechtěného překliknutí
+- probíhá také ajaxově, kde dojde k smazání a vizuálně se smaže z DOM.
