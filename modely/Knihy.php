@@ -76,7 +76,11 @@ class Knihy
 	}
 	
 	public function smazatKnihu($id){
-		Db::dotaz("DELETE FROM knihy WHERE id=?", array($id));
+		try{
+			Db::dotaz("DELETE FROM knihy WHERE id=?", array($id));
+		}catch(PDOException $e){
+			$this->debugerSQL($e);
+		}
 	}
 	
 	private function debugerSQL($e){

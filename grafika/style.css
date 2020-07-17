@@ -9,6 +9,7 @@ th{
 td, th {
   border: 1px solid #ddd;
   padding: 8px;
+  position: relative;
 }
 
 tr.create, tr.search{
@@ -21,6 +22,10 @@ tr.data:nth-child(even){
 
 tr.data:hover{
 	background-color: #ddd;
+}
+
+tr.data:hover span.remove{
+	display: block;
 }
 
 button {
@@ -36,6 +41,18 @@ button {
 button.btn-create{
 	background-color: #2196F3;
 	padding: 6px 20px;
+}
+
+span.remove{
+	background-color: #f44336;
+    padding: 8px 10px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-weight: bold;
+	display: none;
+	cursor: pointer;
+	color: white;
 }
 
 #list-book table{

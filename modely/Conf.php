@@ -7,10 +7,10 @@ class Conf
 	const LOGIN_PASS = "pro-idea";
 	
 	// nastaveni databaze
-	const DB_IP 	= "";
-	const DB_USER	= "";
-	const DB_PASS	= "";
-	const DB_NAME	= "";
+	const DB_IP 	= "wm49.wedos.net";
+	const DB_USER	= "a31990_9cca81e";
+	const DB_PASS	= "5GkbHAgr";
+	const DB_NAME	= "d31990_9cca81e";
 	
 	// konfigurace sablony
 	const NAME_INDEX	= "index2";

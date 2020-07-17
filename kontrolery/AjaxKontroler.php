@@ -9,6 +9,13 @@ class AjaxKontroler extends Kontroler
 				$data = $vyhledavani->vyhledejKnihy($_POST['rok_vydani'],$_POST['autor'],$_POST['nazev_knihy']);
 				
 				$this->vystupJSON($data, "ok");
+			}else if($_POST['action'] == "ajax_remove_book"){
+				if(is_numeric($_POST['id'])){
+					$knihy = new Knihy();
+					$knihy->smazatKnihu($_POST['id']);
+
+					$this->vystupJSON("none", "ok");
+				}
 			}
 		}else{
 			header("Location: ./");
