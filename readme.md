@@ -22,13 +22,27 @@ tato webová aplikace slouží pouze jako ukázka znalostí pro firmu u které s
 - název knihy je fulltextově a musí se shodovat aspoň jedno slovo
 - vyhledávání je úmyslně v tomto případě ajaxově a za pomocí jQuery dochází k úpravě DOM.
 - jakmile nejsou zadané žádné údaje, tak se aplikuej defulatní načtení (100 záznamů)
+- lze vyhledávat kombinovaně
+
+# Smazání knihy
+- vpravo každé knihy je tlačítko na smazání knihy z databáze
+- každé smazání se musí potvrdit z důvodu nechtěného překliknutí
+- probíhá také ajaxově, kde dojde k smazání a vizuálně se smaže z DOM.
 
 # Nastavení
 - veškeré nastavení se provádí v /modely/Conf.php
 - mini nastavení pro zobrazování chybových hlášek SQL
 - nastavení přístupu do databáze
 
-# Smazání knihy
-- vpravo každé knihy je tlačítko na smazání knihy z databáze
-- každé smazání se musí potvrdit z důvodu nechtěného překliknutí
-- probíhá také ajaxově, kde dojde k smazání a vizuálně se smaže z DOM.
+# Nastavení serveru
+- běžné nastavení
+- čtení .htaccess
+- MySQL InnoDB
+
+# Spuštění
+- vytvoření databáze a vložením knihy_struktura.sql nebo již s pár daty  knihy_vcetne_dat.sql
+- upravit v /modely/Conf.php přístupy do databáze
+- zkontrolovat přihlašovací údaje v /modely/Conf.php
+- kdyby byl problém se spuštěním, tak spustitelná verze je zde: https://kniha.ebazar.eu/ ale bude se sdělovat kvůli SSL že je to nezabezpečená stránka. 
+
+
