@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='cs-cz'>
+<head>
+ <base href='kniha.ebazar.eu' />
+ <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+ 
+ <title><?= $titulek ?></title>
+ <meta name='description' content="<?=$popis?>" />
+ <meta name='keywords' content='<?=$klicova_slova?>' />
+
+ <link href='/grafika/style.css?1.0' rel='stylesheet' type='text/css'>
+ <link href="./ico.ico" rel="icon" type="image/png" />
+</head>
+ <body>
+<?php
+	
+	$this->kontroler->vypisPohled();
+?>
+<script src='./js/jquery-min.js'></script>
+<script src='./js/custom.js'></script>
+ </body>
+</html>

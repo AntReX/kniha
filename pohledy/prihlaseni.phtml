@@ -1,0 +1,16 @@
+<div id='form-login'>
+	<form method="post">
+		<div class="container">
+			<label for="uname"><b>Jméno</b></label>
+			<input type="text" placeholder="Jméno..." name="jmeno" required>
+
+			<label for="psw"><b>Heslo</b></label>
+			<input type="password" placeholder="Heslo..." name="heslo" required>
+			<div class = 'msg'>
+				<span><?= $msg ? $msg : '' ?></span>
+			</div>
+			<button type="submit" name='prihlaseni'>Přihlásit se</button>
+			
+		</div>
+	</form>
+</div>

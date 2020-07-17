@@ -1,0 +1,94 @@
+<div id='book_container'>
+	<?php
+		if(!empty($error) && is_array($error)){
+			echo "<div class='error'>";
+			
+			foreach($error AS $e){
+				echo "<span>- {$e}</span>";
+			}
+			
+			echo "</div>";
+		}
+	?>
+	
+	<?php
+		if(!empty($msg)){
+			echo "<div class='msg'><span>- {$msg}</span></div>";
+		}
+	?>
+	
+	<div class='list-book' id='list-book'>
+		<form method='post'>
+			<table>
+				<tr>
+					<th>Rok vydání</th>
+					<th>Autor</th>
+					<th>Název</th>
+					<th>Akce</th>
+				</tr>
+				<tr class='create'>
+					<td><label><input type='number' name='rok-vydani' placeholder='Rok vydání...' value='<?=$form['rok_vydani'] ? $form['rok_vydani'] : ""?>' required></label></td>
+					<td><label><input type='text' name='autor' placeholder='Autor...' value='<?=$form['autor'] ? $form['autor'] : ""?>' required></label></td>
+					<td><label><input type='text' name='nazev-knihy' placeholder='Název knihy...' value='<?=$form['nazev_knihy'] ? $form['nazev_knihy'] : ""?>' required></label></td>
+					<td><label><button class='btn-create vytvor-knihu' name='vytvorit-knihu'>Vytvořit</button></td>
+				</tr>
+			</table>
+		</form>
+		
+		
+		<table class='table_search'>
+			<tr>
+				<th>Rok vydání</th>
+				<th>Autor</th>
+				<th colspan='2'>Název</th>
+			</tr>
+			<tr class='search'>
+				<td><label><input type='number' name='rok-vydani' placeholder='Rok vydání...' required></label></td>
+				<td><label><input type='text' name='autor' placeholder='Autor...' required></label></td>
+				<td><label><input type='text' name='nazev-knihy' placeholder='Název knihy...' required></label></td>
+				<td><label><button class='btn-create btn-search'>Vyhledat</button></td>
+			</tr>
+			<?php 
+				foreach($knihy AS $k){
+					echo "
+					<tr class='data'>
+						<td>{$k['rok_vydani']}</td>
+						<td>{$k['autor']}</td>
+						<td colspan='2'>{$k['nazev']}</td>
+					</tr>";
+				}
+			?>
+			<!--
+			<tr class='data'>
+				<td>1970</td>
+				<td>Karel Hynek Mácha</td>
+				<td colspan='2'>Tohle je zkouška pro pro idea</td>
+			</tr>
+			<tr class='data'>
+				<td>1970</td>
+				<td>Karel Hynek Mácha</td>
+				<td colspan='2'>Tohle je zkouška pro pro idea</td>
+			</tr>
+			<tr class='data'>
+				<td>1970</td>
+				<td>Karel Hynek Mácha</td>
+				<td colspan='2'>Tohle je zkouška pro pro idea</td>
+			</tr>
+			<tr class='data'>
+				<td>1970</td>
+				<td>Karel Hynek Mácha</td>
+				<td colspan='2'>Tohle je zkouška pro pro idea</td>
+			</tr>
+			<tr class='data'>
+				<td>1970</td>
+				<td>Karel Hynek Mácha</td>
+				<td colspan='2'>Tohle je zkouška pro pro idea</td>
+			</tr>
+			<tr class='data'>
+				<td>1970</td>
+				<td>Karel Hynek Mácha</td>
+				<td colspan='2'>Tohle je zkouška pro pro idea</td>
+			</tr> -->
+		</table>
+	</div>
+</div>
