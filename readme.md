@@ -1,5 +1,5 @@
 # Aplikace: Správa knih
-tato webová aplikace slouží pouze jako ukázka znalostí pro firmu u které se ucházím o místo programátora. Vytváření knihy bylo úmyslně provedeno klasickým odelsáním formuláře a samotné hledání pro ukázku bylo vytvořeno ajaxově. Pro vyhledávání jsem použil nejčastější praktiky a pro každou hodnotu jiný způsob.
+tato webová aplikace slouží pouze jako ukázka znalostí pro firmu u které se ucházím o místo programátora. Odeslání formuláře bylo úmyslně provedeno klasickým způsobem a druhý ajaxově. Pro vyhledávání jsem použil nejčastější praktiky a pro každou hodnotu jiný způsob. Defaultní zobrazení knih je s limitem 100 řádků. Nebyl použit kromě jQuery žádný framework a vše bylo kompletně napsáno mnou. MVC strukturu jsem použil takovou, kterou běžně používám.
 
 # Přihlášení
  - jedná se pouze o primitivní přihlášení bez databáze
@@ -9,14 +9,14 @@ tato webová aplikace slouží pouze jako ukázka znalostí pro firmu u které s
   - autor je omezený na 50 znaků a vrací taktéž chybovou hlášku
   - název je omezený na 100 znaků taktéž vrací chyby
   - chyby se vrací všechny na jednou a nikoliv postupně.
-  - probíhá kontrola, zda již stejná kniha existuje a v aopčném případě vyhodí chybovou hlášku
-  - v případě chybové hlášky, tak zůstanou do doby refreshe vložené hodnoty stále vložené
+  - probíhá kontrola, zda již stejná kniha existuje a v apačném případě vrací chybovou hlášku
+  - v případě, že vyskočí chybová hláška, tak uživatel nemusí znovu zadávat vložené hodnoty i když mohla být chybná
   - v momentě úspěšného odeslání vyskočí informace o odeslání a zda knih není mnoho, tak lze vidět vložení ihned.
   - odeslání formuláře je klasickým způsobem
 
 # Vyhledávání
 - rok vydání se vyhledává klasickým způsobem, kdy rok se musí rovnat roku
-- autora lze vyhledat i když obsahuje pouze nějakou část shodnou (LIKE)
+- autora využívá funkci (LIKE)
 - název knihy je fulltextově a musí se shodovat aspoň jedno slovo
 - vyhledávání je úmyslně v tomto případě ajaxově a za pomocí jQuery dochází k úpravě DOM.
 - jakmile nejsou zadané žádné údaje, tak se aplikuej defulatní načtení (100 záznamů)
