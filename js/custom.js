@@ -1,7 +1,6 @@
 $(function(){
-
-	$(document).on("click","button.btn-search", function(){
-
+	
+	function vyhledejKnihy(){
 		$.ajax({
 			url: "/ajax",
 			data: {
@@ -33,6 +32,10 @@ $(function(){
 				location.reload();
 			}
 		});
+	}
+	
+	$(document).on("click","button.btn-search", function(){
+		vyhledejKnihy();
 	});
 	
 	$(document).on("click","span.remove", function(){
@@ -51,7 +54,8 @@ $(function(){
 				type: 'post',
 				dataType: 'json',
 				success: function(res){
-					alert("vše ok");
+					
+					// z duvodu kombinovani 2 formularu php/ajax by dochazelo k odeslani formulare na vytvoreni po F5 nebo v pripade pouziti location.reload(); V praxi bych i vytvoreni jiz resil ajaxove.
 					if(res.status == "ok"){
 						location.href= "./";
 					}
@@ -62,4 +66,10 @@ $(function(){
 			});
 		}
 	});
+	
+	$(document).on("keypress","tr.search",function(e){
+        if(e.which == 13) {
+           vyhledejKnihy();
+        }
+    });
 });

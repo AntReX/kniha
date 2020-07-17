@@ -23,6 +23,7 @@ tato webová aplikace slouží pouze jako ukázka znalostí pro firmu u které s
 - vyhledávání je úmyslně v tomto případě ajaxově a za pomocí jQuery dochází k úpravě DOM.
 - jakmile nejsou zadané žádné údaje, tak se aplikuej defulatní načtení (100 záznamů)
 - lze vyhledávat kombinovaně
+- funguje klávesa enter i v případě ajaxového odesílání bez formuláře
 
 # Smazání knihy
 - vpravo každé knihy je tlačítko na smazání knihy z databáze, ale až po najetí myši
