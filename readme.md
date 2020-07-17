@@ -25,7 +25,7 @@ tato webová aplikace slouží pouze jako ukázka znalostí pro firmu u které s
 - lze vyhledávat kombinovaně
 
 # Smazání knihy
-- vpravo každé knihy je tlačítko na smazání knihy z databáze
+- vpravo každé knihy je tlačítko na smazání knihy z databáze, ale až po najetí myši
 - každé smazání se musí potvrdit z důvodu nechtěného překliknutí
 - probíhá také ajaxově, kde dojde po úspěšném smazání k refreshi stránky.
 - refresh po smazání je z důvodu kombinování formulářů php/ajax, kde v případě F5 docházelo znovu k odeslání smazané hodnoty. Když by nešlo o ukázku, udělal bych obojí ajaxově. 
